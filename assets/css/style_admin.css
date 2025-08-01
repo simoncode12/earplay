@@ -1,0 +1,43 @@
+/* assets/css/style_admin.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+:root {
+    --bg-main: #f9f9f9; --bg-sidebar: #ffffff; --bg-topbar: #ffffff; --bg-card: #ffffff;
+    --text-primary: #0d0d0d; --text-secondary: #606060; --border-color: #e0e0e0;
+    --primary-color: #cc0000; --primary-hover: #990000; --sidebar-icon: #909090;
+    --sidebar-active-bg: #f2f2f2; --shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    --success-color: #16a34a; --danger-color: #dc2626;
+}
+body { background-color: var(--bg-main); color: var(--text-primary); font-family: 'Roboto', sans-serif; margin: 0; font-size: 15px; }
+.admin-layout { display: flex; }
+.admin-sidebar { width: 240px; background-color: var(--bg-sidebar); border-right: 1px solid var(--border-color); height: 100vh; position: fixed; top: 0; left: 0; display: flex; flex-direction: column; }
+.sidebar-logo-container { padding: 16px 24px; border-bottom: 1px solid var(--border-color); }
+.sidebar-logo { color: var(--text-primary); font-size: 1.5em; font-weight: bold; text-decoration: none; }
+.sidebar-nav { padding: 12px 0; flex-grow: 1; }
+.sidebar-nav a { display: flex; align-items: center; gap: 20px; padding: 12px 24px; color: var(--text-primary); text-decoration: none; font-weight: 500; border-left: 4px solid transparent; }
+.sidebar-nav a:hover { background-color: var(--sidebar-active-bg); }
+.sidebar-nav a i { color: var(--sidebar-icon); font-size: 18px; }
+.admin-main-view { margin-left: 240px; width: calc(100% - 240px); }
+.admin-topbar { background-color: var(--bg-topbar); border-bottom: 1px solid var(--border-color); padding: 8px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+.topbar-search { display: flex; align-items: center; border: 1px solid #ccc; border-radius: 40px; padding: 0 15px; width: 40%; }
+.topbar-search i { color: #909090; }
+.topbar-search input { border: none; outline: none; padding: 10px; background: none; width: 100%; }
+.topbar-user { display: flex; align-items: center; gap: 16px; }
+.user-avatar { width: 32px; height: 32px; border-radius: 50%; background-color: var(--primary-color); color: white; display: flex; justify-content: center; align-items: center; font-weight: bold; }
+.logout-link { font-size: 18px; color: var(--text-secondary); }
+.admin-content-area { padding: 24px 30px; }
+.admin-content-area h1 { font-size: 1.8em; margin: 0 0 24px 0; }
+.admin-section { background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 24px; }
+.admin-section .section-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; border-bottom: 1px solid var(--border-color); }
+.admin-section .section-header h2 { font-size: 1.2em; margin: 0; }
+.admin-section .content { padding: 24px; }
+form label { display: block; margin-bottom: 8px; font-weight: 500; color: var(--text-secondary); font-size: 0.9em; }
+form input, form select, form textarea { width: 100%; padding: 10px 12px; margin-bottom: 20px; border-radius: 4px; border: 1px solid #ccc; box-sizing: border-box; font-size: 1em; }
+form input:focus, form select:focus, form textarea:focus { outline: none; border-color: #065fd4; }
+.btn, button, .button { text-transform: uppercase; font-weight: 500; border-radius: 4px; padding: 10px 16px; border: none; cursor: pointer; text-decoration: none; transition: background-color 0.2s; }
+.btn-primary, button[type="submit"] { background-color: var(--primary-color); color: white; }
+.btn-primary:hover, button[type="submit"]:hover { background-color: var(--primary-hover); }
+.btn-outline { border: 1px solid #ccc; background: none; color: var(--text-primary); }
+.btn-outline:hover { background-color: #f2f2f2; }
+.alert { padding: 16px; margin-bottom: 24px; border-radius: 4px; border-left: 4px solid; }
+.alert.success { border-color: var(--success-color); background-color: #f0fdf4; color: #15803d; }
+.alert.error { border-color: var(--danger-color); background-color: #fef2f2; color: #991b1b; }
