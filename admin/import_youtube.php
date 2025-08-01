@@ -7,7 +7,7 @@ require_once '../includes/functions.php';
 check_admin_auth();
 
 // Definisikan API Key YouTube Anda
-define('YOUTUBE_API_KEY', 'AIzaSyDLulaJ1eKOY2Ly-MdpkxG2smQF2KbkB1E');
+define('YOUTUBE_API_KEY', '');
 
 // Inisialisasi variabel
 $error = '';
